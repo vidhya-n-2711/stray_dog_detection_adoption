@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+<h2>Report a Stray Dog (Upload Photo)</h2>
+<form method="post" enctype="multipart/form-data">
+  <label
+    >Photo: <input type="file" name="file" accept="image/*" required /></label
+  ><br />
+  <label>Location: <input type="text" name="location" /></label><br />
+  <label
+    >Health (Healthy/Injured/Malnourished):
+    <input type="text" name="health" /></label
+  ><br />
+  <label>Age (Puppy/Adult): <input type="text" name="age" /></label><br />
+  <label>Size (Small/Medium/Large): <input type="text" name="size" /></label
+  ><br />
+  <button type="submit">Upload & Detect</button>
+</form>
+{% endblock %}

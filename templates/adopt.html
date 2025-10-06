@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block content %}
+<h2>Find Dogs for Adoption</h2>
+<form method="post">
+  <label
+    >Preferred Size:
+    <input type="text" name="size" placeholder="Small/Medium/Large" /></label
+  ><br />
+  <label
+    >Preferred Age:
+    <input type="text" name="age" placeholder="Puppy/Adult" /></label
+  ><br />
+  <label
+    >Health:
+    <input type="text" name="health" placeholder="Healthy/Injured" /></label
+  ><br />
+  <button type="submit">Get Recommendations</button>
+</form>
+
+{% if recommended %}
+<h3>Recommended Dogs</h3>
+<div class="grid">
+  {% for dog in recommended %}
+  <div class="card">
+    <img src="/{{ dog.image_path }}" alt="dog" />
+    <p>Count: {{ dog.count }}</p>
+    <p>Location: {{ dog.location or 'Unknown' }}</p>
+    <p>Health: {{ dog.health }}</p>
+    <p>Age: {{ dog.age }}</p>
+    <p>Size: {{ dog.size }}</p>
+    <a href="/dog/{{ dog.id }}/mark_adopted">Mark Adopted</a>
+  </div>
+  {% endfor %}
+</div>
+{% endif %} {% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %} {% block content %}
+<h1>Stray Dog Management & Adoption</h1>
+<p>Recent detected dogs:</p>
+<div class="grid">
+  {% for dog in recent %}
+  <div class="card">
+    <img src="/{{ dog.image_path }}" alt="dog" />
+    <p>Count: {{ dog.count }}</p>
+    <p>Location: {{ dog.location or 'Unknown' }}</p>
+    <p>Health: {{ dog.health }}</p>
+    <p>Age: {{ dog.age }}</p>
+    <p>Size: {{ dog.size }}</p>
+    {% if not dog.adopted %}
+    <a href="/dog/{{ dog.id }}/mark_adopted">Mark Adopted</a>
+    {% else %}
+    <strong>Adopted</strong>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
