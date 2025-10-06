@@ -25,50 +25,54 @@ A small step with technology → a giant leap for animal welfare. ❤️
 🌐 Clean Flask Web Interface with simple navigation.
 
 🛠️ Tech Stack
-| Layer | Technology |
-| -------------- | -------------------------------------- |
-| 👨‍💻 Frontend v| HTML, CSS (Flask Templates) |
-| ⚙️ Backend | Python, Flask |
-| 🧠 AI/ML | YOLOv8 (Ultralytics) |
-| 🗄️ Database | SQLite (via SQLAlchemy in `models.py`) |
-| 📦 Environment | Virtualenv, pip |
+Layer	Technology
+👨‍💻 Frontend	HTML, CSS (Flask Templates)
+⚙️ Backend	Python, Flask
+🧠 AI/ML	YOLOv8 (Ultralytics)
+🗄️ Database	SQLite (via SQLAlchemy in models.py)
+📦 Environment	Virtualenv, pip
 
 📂 Project Structure
+csharp
+Copy code
 stray_dog_project/
-├── app.py # Main Flask app
-├── models.py # Database models (dogs, users, NGOs)
+├── app.py              # Main Flask app
+├── models.py           # Database models (dogs, users, NGOs)
 ├── detection/
-│ └── detect.py # YOLOv8 detection logic
+│   └── detect.py       # YOLOv8 detection logic
 ├── recommender/
-│ └── recommend.py # Simple recommender for adopters
+│   └── recommend.py    # Simple recommender for adopters
 ├── static/
-│ ├── css/
-│ │ └── styles.css # Custom styles
-│ └── images/ # Uploaded images
+│   ├── css/
+│   │   └── styles.css  # Custom styles
+│   └── images/         # Uploaded images
 ├── templates/
-│ ├── base.html # Shared layout
-│ ├── index.html # Home page
-│ ├── upload.html # Detection upload page
-│ └── adopt.html # Adoption listing
-├── requirements.txt # Dependencies
-└── README.md # Documentation
-
+│   ├── base.html       # Shared layout
+│   ├── index.html      # Home page
+│   ├── upload.html     # Detection upload page
+│   └── adopt.html      # Adoption listing
+├── requirements.txt    # Dependencies
+└── README.md           # Documentation
 ⚙️ Installation & Setup
 1️⃣ Clone Repository
+bash
+Copy code
 git clone https://github.com/your-username/stray_dog_project.git
 cd stray_dog_project
-
 2️⃣ Setup Virtual Environment
+bash
+Copy code
 python -m venv venv
-venv\Scripts\activate # Windows
-source venv/bin/activate # Linux/Mac
-
+venv\Scripts\activate   # Windows
+source venv/bin/activate  # Linux/Mac
 3️⃣ Install Dependencies
+bash
+Copy code
 pip install -r requirements.txt
-
 4️⃣ Run the Application
+bash
+Copy code
 python app.py
-
 Now open 👉 http://127.0.0.1:5000
 
 🚀 Future Roadmap
@@ -86,3 +90,4 @@ Let’s use AI for Good ✨.
 
 📜 License
 This project is licensed under the MIT License – free to use and improve.
+
